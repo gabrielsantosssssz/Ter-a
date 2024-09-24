@@ -1,0 +1,19 @@
+using System;
+
+public class Program
+{
+    public static void Main()
+    {
+        float peso, altura, imc;
+
+        Console.Write("Digite sua altura (m): ");
+        altura = float.Parse(Console.ReadLine());
+
+        Console.Write("Digite seu peso (kg): ");
+        peso = float.Parse(Console.ReadLine());
+
+        imc = peso / (altura * altura);
+
+        Console.WriteLine("Seu IMC é " + imc + " kg/m²");
+    }
+}
