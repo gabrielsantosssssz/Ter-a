@@ -1,0 +1,17 @@
+altura = float(input("digite sua altura em metros: "))
+peso = float(input("digite seu peso em kg: "))
+imc = peso / (altura ** 2)
+print(f"o seu imc é: {imc:.2f}")
+
+from flask import Flask, render_template
+
+app = Flask(__name__)
+
+@app.route('/')
+def index():
+    nome = "Seu Código Python está funcionando!"
+    resultado = 5 * 2
+    return render_template('index.html', nome=nome, resultado=resultado)
+
+if __name__ == '__main__':
+    app.run(debug=True)
